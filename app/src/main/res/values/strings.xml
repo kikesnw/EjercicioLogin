@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EjercicioLogin</string>
+    <string name="tvusuario">Usuario</string>
+    <string name="tvcontraseña">Contraseña</string>
+    <string name="cbcondiciones">Acepta las condiciones</string>
+    <string name="bttnentrar">entrar</string>
+    <string name="bttnresgistro">registro</string>
+</resources>

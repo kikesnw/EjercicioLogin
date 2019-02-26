@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EjercicioLogin</string>
+    <string name="tvusuario">user</string>
+    <string name="tvcontraseña">password</string>
+    <string name="cbcondiciones">Do you agree...</string>
+    <string name="bttnentrar">Sign-in</string>
+    <string name="bttnresgistro">sign-up</string>
+</resources>
