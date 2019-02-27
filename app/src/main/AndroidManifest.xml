@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Registro"></activity>
         <activity android:name=".MenuUsuario"></activity>
+        <activity android:name=".Menu.ConsultaPersonas"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
