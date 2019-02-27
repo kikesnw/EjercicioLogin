@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,7 +19,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
     EditText campoUsuario,campoContraseña;
-
+    CheckBox privacidad;
 
 
 
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity{
         //Variables
         campoUsuario = (EditText) findViewById(R.id.etUsuario);
         campoContraseña = (EditText) findViewById(R.id.etContraseña);
+
+        //politica de privacidad
+        privacidad=findViewById(R.id.cbcondiciones);
 
         //botones
         Button botonregistro = (Button) findViewById(R.id.bttnRegistro);
@@ -81,10 +85,13 @@ public class MainActivity extends AppCompatActivity{
             //Si el usuario y la contraseña han sido encontrados en la base de datos se procede al login
                     if(validacionuser==true){
                         if(validacioncontra==true){
-                            Toast.makeText(getApplicationContext(),"Entra", Toast.LENGTH_SHORT).show();
+                            if(privacidad.isChecked()) {
+                                Intent intent = new Intent(this, com.example.ejerciciologin.MenuUsuario.class); //con el intent hacemos que con el click vaya a Registro.class
+                                startActivityForResult(intent, 0); //lo iniciamos
+                            }else{
+                                Toast.makeText(getApplicationContext(), "Tiene que marcar la casilla de privacidad", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(this, com.example.ejerciciologin.MenuUsuario.class); //con el intent hacemos que con el click vaya a Registro.class
-                            startActivityForResult(intent, 0); //lo iniciamos
+                        }
                         }else{
                             Toast.makeText(getApplicationContext(), "La contraseña no es correcta", Toast.LENGTH_SHORT).show();}
 

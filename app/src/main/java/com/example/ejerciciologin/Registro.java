@@ -49,8 +49,8 @@ public class Registro extends AppCompatActivity {
         comboDias=findViewById(R.id.idSpinner);
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.paises,android.R.layout.simple_spinner_item);
         comboDias.setAdapter(adapter);
-        //politica de privacidad
 
+        //politica de privacidad
         privacidad=findViewById(R.id.cbcondiciones);
 
 
