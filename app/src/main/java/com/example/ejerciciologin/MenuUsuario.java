@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.ejerciciologin.Menu.ConsultaPersonas;
-import com.example.ejerciciologin.Menu.ListadoPersonas;
 
 public class MenuUsuario extends AppCompatActivity {
     @Override
@@ -19,7 +18,7 @@ public class MenuUsuario extends AppCompatActivity {
         botonConsulta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { //listener para cuando se pulse el boton
-                Intent intent = new Intent(v.getContext(), ConsultaPersonas.class); //con el intent hacemos que con el click vaya a Registro.class
+                Intent intent = new Intent(v.getContext(), ConsultaPersonas.class); //con el intent hacemos que con el click vaya a la clase
                 startActivityForResult(intent, 0); //lo iniciamos
             }
         });

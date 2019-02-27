@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity{
                     if(validacionuser==true){
                         if(validacioncontra==true){
                             if(privacidad.isChecked()) {
-                                Intent intent = new Intent(this, com.example.ejerciciologin.MenuUsuario.class); //con el intent hacemos que con el click vaya a Registro.class
+                                Intent intent = new Intent(this, com.example.ejerciciologin.MenuUsuario.class); //con el intent hacemos que con el click vaya a la clase
                                 startActivityForResult(intent, 0); //lo iniciamos
                             }else{
                                 Toast.makeText(getApplicationContext(), "Tiene que marcar la casilla de privacidad", Toast.LENGTH_SHORT).show();
